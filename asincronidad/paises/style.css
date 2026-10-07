@@ -1,0 +1,145 @@
+/* Modo Oscuro & Estilo Neón */
+body {
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #0f111a;
+  color: #f8f9fa;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Título con brillo sutil */
+h1 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Contenedor del buscador */
+.search-container {
+  display: flex;
+  background: #1a1d29;
+  padding: 6px;
+  border-radius: 35px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #2d3250;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  background: transparent;
+  border: none;
+  padding: 12px 20px;
+  width: 260px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #6c757d;
+}
+
+/* Botón llamativo con neón */
+button {
+  background: linear-gradient(135deg, #ffcb05 0%, #ff9800 100%);
+  color: #1a1d29;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Tarjeta de resultado Pokémon */
+#resultado {
+  margin-top: 30px;
+  background: #1a1d29;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid #2d3250;
+  text-align: center;
+  width: 240px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#resultado:hover {
+  border-color: #3498db;
+  box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Nombre del Pokémon */
+#resultado h2 {
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* Peso */
+#resultado h3 {
+  margin: 0 0 15px 0;
+  color: #3498db;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(52, 152, 219, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+/* Imagen con efecto flotante */
+#resultado img {
+  width: 140px;
+  height: 140px;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Estado vacío o error */
+#resultado p {
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+}
