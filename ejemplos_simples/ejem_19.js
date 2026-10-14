@@ -17,3 +17,24 @@ console.log(resultado);
 //pilla pares
 const par = numeros.filter((num) => num % 2 === 0);
 console.log(par);
+
+//mostrar el cuadrado de los numeros
+const cuadrado = numeros.map((num) => num * num);
+console.log(cuadrado);
+
+//mostrar nombres en mayusculas
+const nombres = ["antonio", "pepe", "angel", "vitrasa"];
+const mayus = nombres.map((nomb) => nomb.toUpperCase());
+console.log(mayus);
+
+//mostrar los positivos duplciados
+const duplicados = numeros.filter((num) => num > 0).map((num) => num * 2);
+console.log(duplicados);
+
+//mostrar cada hobbi entre etiquetas li
+const hobbies = ["cantar", "comer", "dormir", "chepa"];
+const hobbiesHtml = hobbies.map((hobbie) => `<li>${hobbie}<li>`);
+
+//dame los numeros sumados
+const suma = numeros.reduce((num1, num2) => num1 + num2);
+console.log(suma);
